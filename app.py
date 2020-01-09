@@ -12,11 +12,11 @@ def index():
     errors = []
     
     if request.method == 'POST':
-    try:
-        salario = request.form['salario']
-        print(f'Este es el salario ingresado {salario}')
-    except:
-        errors.append("No se pudo obtener el salario")
+        try:
+            salario = request.form['salario']
+            print(f'Este es el salario ingresado {salario}')
+        except:
+            errors.append("No se pudo obtener el salario")
     return render_template('index.html')
 
 if __name__ == '__main__':
