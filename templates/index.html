@@ -30,6 +30,11 @@
       </form>
       <br>
     <!--Table for the results-->
+    <!--
+    {% for resp in result %}
+        <p>{{ resp }}</p>
+    {% endfor %}
+    -->
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -39,8 +44,8 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Remuneracion no agrabada AFP</th>
-            <td></td>
+            <th scope="row">Remuneracion no agrabada AFP {{result[0]}}: </th>
+            <td>{{ result[1] }}</td>
           </tr>
           <tr>
             <th scope="row">Remuneracion no agrabada ISSS</th>
