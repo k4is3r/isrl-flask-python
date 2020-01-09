@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Calculo ISRL</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+    <h1 class="display-4">Calculo ISRL, El Salvador</h1>
+    <p class="lead">Una simple App que te calcula el sueldo mensual a recibir con los descuentos de ley</p>
+    <hr class="my-4">
+      <form>
+        <div class="form-group">
+          <label for="salario">Salario</label>
+          <input class="form-control" id="salario">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoAfp" id="crecer" value="1" checked>
+          <label class="form-check-label" for="crecer">Confia</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoAfp" id="confia" value="1">
+          <label class="form-check-label" for="confia">Confia</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoAfp" id="ipsfa" value="1">
+          <label class="form-check-label" for="ipsfa">IPSFA</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="tipoAfp" id="isss" value="1">
+          <label class="form-check-label" for="isss">ISSS</label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Calcular</button>
+      </form>
+      <br>
+    <!--Table for the results-->
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Remuneracion no agrabada AFP</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Remuneracion no agrabada ISSS</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">Remuneracion grabada</th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <!--Final jubotron-->
+    <div class="jumbotron">
+    <p>Realizado con BootStrap(FrontEnd) / Python(BackEnd)</p>
+    <p>Deploy en Google App Engine</p>
+    <p>GCP</p>
+    <a class="btn btn-primary btn-lg" href="https://iwdevelop.com" role="button" target="_blank">Saber mas</a>
+    </div>
+    <!-- BootStrap Javascript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+ <!--
+    print(f'Remuneracion no agrabada AFP {nombre_afp} : ${calc_afp} ')
+    print(f'Remuneracion no agrabada ISSS: ${isss}')
+    print(f'Remuneracion grabada : ${grabado}')
+    print(f'Porcentaje a aplicar: {porcentaje*100}')
+    print(f'Sobre el exceso : ${sexceso}')
+    print(f'Exceso : ${exceso}')
+    print(f'Porcentaje del exceso: ${pexceso}')
+    print(f'Retencion mensual: ${retencion}')
+    print(f'Descuento total mensual: ${descuento_total}')
+    print(f'Sueldo neto a recibir mensual: ${sueldo_neto}')
+    -->
