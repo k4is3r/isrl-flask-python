@@ -29,12 +29,7 @@
         <button type="submit" class="btn btn-primary">Calcular</button>
       </form>
       <br>
-    <!--Table for the results-->
-    <!--
-    {% for resp in result %}
-        <p>{{ resp }}</p>
-    {% endfor %}
-    -->
+    {% if result %}
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -45,18 +40,49 @@
         <tbody>
           <tr>
             <th scope="row">Remuneracion no agrabada AFP {{result[0]}}: </th>
-            <td>{{ result[1] }}</td>
+            <td>${{ result[1] }}</td>
           </tr>
           <tr>
-            <th scope="row">Remuneracion no agrabada ISSS</th>
-            <td></td>
+            <th scope="row">Remuneracion no agrabada ISSS:</th>
+            <td>${{ result[2] }}</td>
           </tr>
           <tr>
-            <th scope="row">Remuneracion grabada</th>
-            <td></td>
+            <th scope="row">Remuneracion grabada:</th>
+            <td>${{ result[3] }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Porcentaje a aplicar:</th>
+            <td>{{ result[4]*100 }}%</td>
+          </tr>
+          <tr>
+            <th scope="row">Sobre el exceso:</th>
+            <td>${{ result[5] }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Exceso:</th>
+            <td>${{ result[6] }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Porcentaje del exceso:</th>
+            <td>{{ result[7]*100 }}%</td>
+          </tr>
+          <tr>
+            <th scope="row">Retencion mensual:</th>
+            <td>${{ result[8] }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Descuento total mensual:</th>
+            <td>${{ result[9] }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Sueldo neto a recibir mensual:</th>
+            <td>${{ result[10] }}</td>
           </tr>
         </tbody>
       </table>
+    <h3>Al final de descuentos del saliro a recibir ${{result[11]}}</h3>
+    <h3>Va a recibir mensual un saliro de ${{result[10]}}</h3>
     </div>
+    {% endif %}
     </div>
 {% endblock %}

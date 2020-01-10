@@ -23,6 +23,7 @@ def index():
     
     if resp:
         result = isrlc.islr(resp[0],resp[1])
+        result.append(resp[0])
 
     return render_template('index.html', result = result)
 
