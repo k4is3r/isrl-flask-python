@@ -29,4 +29,9 @@ def index():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD:app.py
+    port = 3000
+    app.run(host='0.0.0.0',debug = True, port=port)
+=======
     app.run(host='127.0.0.1',port=8080, debug = True)
+>>>>>>> 637cc12869e6a425ba1cec60594426d8faf8d199:main.py
