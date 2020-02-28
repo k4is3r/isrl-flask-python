@@ -85,20 +85,7 @@ def islr(sueldo,afp_tipo):
     results.append(retencion)
     results.append(descuento_total)
     results.append(sueldo_neto)
-
-    #Presentacion de datos
-    """
-    print(f'Remuneracion no agrabada AFP {nombre_afp} : ${calc_afp} ')
-    print(f'Remuneracion no agrabada ISSS: ${isss}')
-    print(f'Remuneracion grabada : ${grabado}')
-    print(f'Porcentaje a aplicar: {porcentaje*100}')
-    print(f'Sobre el exceso : ${sexceso}')
-    print(f'Exceso : ${exceso}')
-    print(f'Porcentaje del exceso: ${pexceso}')
-    print(f'Retencion mensual: ${retencion}')
-    print(f'Descuento total mensual: ${descuento_total}')
-    print(f'Sueldo neto a recibir mensual: ${sueldo_neto}')
-    """
+    
     return results
 
 
@@ -113,13 +100,6 @@ if __name__ == '__main__':
     """))
 
     calc_islr = islr(sueldo,afp)
-    print(f'Remuneracion no agrabada AFP {str(calc_islr[0])} : ${str(calc_islr[1])} ')
-    print(f'Remuneracion no agrabada ISSS: ${str(calc_islr[2])}')
-    print(f'Remuneracion grabada : ${str(calc_islr[3])}')
-    print(f'Porcentaje a aplicar: {str(calc_islr[4]*100)}')
-    print(f'Sobre el exceso : ${str(calc_islr[5])}')
-    print(f'Exceso : ${str(calc_islr[6])}')
-    print(f'Porcentaje del exceso: ${str(calc_islr[7])}')
-    print(f'Retencion mensual: ${str(calc_islr[8])}')
-    print(f'Descuento total mensual: ${str(calc_islr[9])}')
-    print(f'Sueldo neto a recibir mensual: ${str(calc_islr[10])}')
+    print(calc_islr[9])
+    print(calc_islr[10])
+     
