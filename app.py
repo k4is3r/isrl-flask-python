@@ -30,7 +30,6 @@ async def handle_salary(request: Request):
         try:
             month_salary = float(form_send['salario'])
             afp_type = int(form_send['tipoAfp'])
-            print(month_salary, afp_type)
             resp.append(month_salary)
             resp.append(afp_type)
         except request.NotSalaryFound:

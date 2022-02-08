@@ -19,4 +19,4 @@ __pycache__/
 /setup.cfg
 #enviroment exclude
 .venv/
-
+.env/
