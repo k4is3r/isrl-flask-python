@@ -18,7 +18,6 @@ def tabla_afp(grabado):
     Esta funcion ubica en que escalafon de la tabla de AFP se encuentra el
     asalariado
     """
-
     if grabado >= 0.01 and grabado <= 472.01:
         porcentaje = 0.00
         sexceso = 0
