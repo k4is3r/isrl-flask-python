@@ -29,8 +29,7 @@
         <button type="submit" class="btn btn-primary">Calcular</button>
       </form>
       <br>
-    <!-- {% if result %} -->
-    <p>{{ result[1] }}</p>
+    {% if result %}
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -86,6 +85,6 @@
     <h3>Descuentos totales al mes del salario  ${{result[9]}}</h3>
     <h3>Salario despues de descuentos ${{result[10]}}</h3>
     </div>
-    <!-- {% endif %} -->
+    {% endif %}
     </div>
 {% endblock %}
