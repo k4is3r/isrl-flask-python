@@ -4,7 +4,7 @@
     <h1 class="display-4">Calculo ISRL, El Salvador</h1>
     <p class="lead">Una simple App que te calcula el sueldo mensual a recibir con los descuentos de ley</p>
     <hr class="my-4">
-      <form method="POST" action='/'>
+      <form method="POST" action="handle-salary">
         <div class="form-group">
           <label for="salario">Salario</label>
           <input class="form-control" id="salario" name='salario'>
@@ -29,7 +29,8 @@
         <button type="submit" class="btn btn-primary">Calcular</button>
       </form>
       <br>
-    {% if result %}
+    <!-- {% if result %} -->
+    <p>{{ result[1] }}</p>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -85,6 +86,6 @@
     <h3>Descuentos totales al mes del salario  ${{result[9]}}</h3>
     <h3>Salario despues de descuentos ${{result[10]}}</h3>
     </div>
-    {% endif %}
+    <!-- {% endif %} -->
     </div>
 {% endblock %}
