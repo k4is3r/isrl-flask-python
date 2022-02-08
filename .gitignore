@@ -4,3 +4,4 @@ templates/.base.html.swp
 templates/.index.html.swp
 __pycache__/
 
+.env
