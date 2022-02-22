@@ -1,7 +1,17 @@
+# gcp debugger
+try:
+    import googleclouddebugger
+    googleclouddebugger.enable(
+            breakpoint_enable_canary=True
+    )
+except ImportError:
+    pass
+
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import isrlCalc as isrlc
+
 
 app = FastAPI()
 
