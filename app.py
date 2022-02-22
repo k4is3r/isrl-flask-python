@@ -7,6 +7,7 @@ try:
 except ImportError:
     pass
 
+import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -53,3 +54,6 @@ async def handle_salary(request: Request):
                         "index.html",
                         {"request": request,
                          "result": result})
+
+#if __name__ == "__main__":
+#    uvicorn.run("app:app", host="0.0.0.0", port=8080)
