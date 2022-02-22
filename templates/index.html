@@ -4,7 +4,7 @@
     <h1 class="display-4">Calculo ISRL, El Salvador</h1>
     <p class="lead">Una simple App que te calcula el sueldo mensual a recibir con los descuentos de ley</p>
     <hr class="my-4">
-      <form method="POST" action='/'>
+      <form method="POST" action="handle-salary">
         <div class="form-group">
           <label for="salario">Salario</label>
           <input class="form-control" id="salario" name='salario'>
@@ -62,12 +62,6 @@
             <th scope="row">Exceso:</th>
             <td>${{ result[6] }}</td>
           </tr>
-          <!--
-          <tr>
-            <th scope="row">Porcentaje del exceso:</th>
-            <td>{{ result[7]*100 }}%</td>
-          </tr>
-          -->
           <tr>
             <th scope="row">Retencion mensual:</th>
             <td>${{ result[8] }}</td>
@@ -82,8 +76,10 @@
           </tr>
         </tbody>
       </table>
+    <h3>Salario ${{ result[9] + result[10] }}</h3>
     <h3>Descuentos totales al mes del salario  ${{result[9]}}</h3>
     <h3>Salario despues de descuentos ${{result[10]}}</h3>
+    <h3>Salario quincenal ${{ result[10]/2 }}</h3>
     </div>
     {% endif %}
     </div>
